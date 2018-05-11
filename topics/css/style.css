@@ -1,0 +1,116 @@
+		body {
+			background: #eee;
+		}
+		
+		.main-container  {
+			background: #fff;
+		}
+		
+		h1 {
+    		border-bottom: 1px solid #000;
+    	}
+    
+        table {
+            border: 1px solid #666;
+            width: 100%;
+        }
+        th {
+            background: #f8f8f8; 
+            font-weight: bold;
+            padding: 2px;
+        }
+        .topic-page .row {
+        	padding-bottom: 30px;
+        }
+        
+        img {
+        	max-width: 100%;
+        	height: auto !important;
+        }
+        
+        #year {
+        	vertical-align: top;
+        }
+    	
+		@media (min-width: 1499px){
+			.container {
+    			width: 1500px;
+			}
+		}
+        .data-table td,
+        .data-table th {
+        	padding: 4px;
+        }
+        header#navbar,
+        header {
+        	background: #0841a1;
+        	color: #fff;
+        }
+        .site-name,
+        header .navbar-default .navbar-brand {
+        	font-size: 22px;
+        	padding: 10px 0 2px;
+        	font-weight: bold;
+        	color: #fff;
+        }
+        
+        .show-form {
+        	position: relative;
+        	bottom: 2px;
+        	margin-left: 4px;
+        	text-decoration: underline;
+        }
+        
+        #geo_select {
+        	display: none;
+        }
+        
+        #geo_select label {
+        	margin-bottom: 15px;
+        }
+        
+        #state-wrapper,
+        #stateselect-wrapper {
+        	display: none;
+        }
+        
+        .legend ul {
+    		-moz-column-count: 4;
+    		-moz-column-gap: 20px;
+    		-webkit-column-count: 4;
+    		-webkit-column-gap: 20px;
+    		column-count: 4;
+    		column-gap: 30px;
+		}
+        
+        .legend li {
+    		list-style: none;
+    		display: inline-block;
+    		width: 100%;
+		}
+		
+		.legend-box {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin-left: -15px;
+		}
+        
+        th {
+        	background: #ddd;
+        }
+        
+        table caption {
+        	font-weight: bold;
+    		color: #000;
+        }
+        
+        footer {
+        	padding: 25px 0 20px;
+        }
+        
+        .footer-nav li {
+    		display: inline-block;
+    		list-style: none;
+    		padding: 10px;
+    	}
