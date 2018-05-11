@@ -1,0 +1,46 @@
+/* 
+censcope custom styles
+*/
+
+body {
+	background: #eee;
+}
+
+.main-container {
+    background: #fff;
+}
+
+@media (min-width: 1499px) {
+.container {
+    width: 1500px;
+}
+}
+
+.navbar-brand {
+	color: #fff;
+	font-size: 22px;
+    padding: 13px 0 2px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-nav > li > a {
+	color: #fff;
+}
+
+.navbar-nav {
+	padding: 0 10px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+footer {
+	
+}
