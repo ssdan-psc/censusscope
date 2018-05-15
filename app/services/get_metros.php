@@ -1,10 +1,11 @@
 <?php
-include '../includes/config.inc';
+
 //$state = $_POST['state'];
 // define the table to use for this topic
 $table = "Test_3_9";
 
 function queryAllDB($query){
+include '../includes/config.inc';
 $host = $db_host;
 $db   = $db_name;
 $user = $db_user;

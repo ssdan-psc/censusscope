@@ -1,18 +1,17 @@
 <?php
 
-include 'config.inc';
 
 function dbConnect(){
 
 	static $connection;
 	
 	if(!isset($connection)) {
-	$host = $db_host;
-	$db   = $db_name;
-	$user = $db_user;
-	$pass = $db_password;
+	$host = "webapps4-mysql.miserver.it.umich.edu";
+	$db   = "censcope";
+	$user = "censcope";
+	$pass = "lsH6TnU2$5k4";
 	$charset = "utf8mb4";
-	$port = $db_port;
+	$port = "3306";
 	$dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
 	$opt = array(
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -82,6 +81,14 @@ function getMeasures($mids,$year,$geoid){
 	$mids = implode(",",$mids);
 	$query = "SELECT DISTINCT ".$mids." FROM " . $table . " WHERE year = ? AND GEOID = ?";
 	$query_params = array($year,$geoid);
+	return queryDBAll($query,$query_params);
+}
+
+function getMeasuresByGeoLevel($mids,$year,$sumlev){
+	global $table;
+	$mids = implode(",",$mids);
+	$query = "SELECT DISTINCT ".$mids.", NAME FROM " . $table . " WHERE year = ? AND SUMLEVEL = ?";
+	$query_params = array($year,$sumlev);
 	return queryDBAll($query,$query_params);
 }
 

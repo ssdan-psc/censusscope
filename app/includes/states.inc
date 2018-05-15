@@ -1,9 +1,10 @@
 <?php
 
-include '../includes/config.inc';
 
 function get_states($table){
 // Connect to MySQL
+
+include '../includes/config.inc';
 $servername = $db_host;
 $username = $db_user;
 $password = $db_password;

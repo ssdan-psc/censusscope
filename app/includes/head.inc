@@ -19,8 +19,7 @@ include 'states.inc';
 <style>
 @import url("http://www.censusscope.org/new/sites/all/themes/censcope/css/bootstrap.css?p2cvwb");
 </style>
-</head>
-<body >
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 <script src="/new/topics/js/topics.js"></script>
@@ -28,6 +27,13 @@ include 'states.inc';
 <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>
+<script type="text/javascript" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+</head>
+<body >
+
+
 
 <header>
 <div class="container">
