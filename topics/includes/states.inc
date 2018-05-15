@@ -1,13 +1,15 @@
 <?php
 
+include '../includes/config.inc';
+
 function get_states($table){
 // Connect to MySQL
-$servername = "webapps4-mysql.miserver.it.umich.edu";
-$username = "censcope";
-$password = "ChangeMeNow2017_censcope";
+$servername = $db_host;
+$username = $db_user;
+$password = $db_password;
 $table = "combined101415";
-$database = "censcope";
-$port = '3306';
+$database = $db_name;
+$port = $db_port;
 
 try {
     $conn = new PDO("mysql:host=".$servername.";port=".$port.";dbname=".$database, $username, $password);

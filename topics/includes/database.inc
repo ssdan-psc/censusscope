@@ -1,17 +1,18 @@
 <?php
 
+include 'config.inc';
 
 function dbConnect(){
 
 	static $connection;
 	
 	if(!isset($connection)) {
-	$host = "webapps4-mysql.miserver.it.umich.edu";
-	$db   = "censcope";
-	$user = "censcope";
-	$pass = "ChangeMeNow2017_censcope";
+	$host = $db_host;
+	$db   = $db_name;
+	$user = $db_user;
+	$pass = $db_password;
 	$charset = "utf8mb4";
-	$port = "3306";
+	$port = $db_port;
 	$dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
 	$opt = array(
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
