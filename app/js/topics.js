@@ -37,8 +37,8 @@ $('#level').on("change",function(event){
     	
     	// if metro, show all the metros TO-DO: let users select a state first. need a db column that relates states to metros to enable this.
     	if(level == 'metro'){
-    		//$('#stateselect-wrapper').show();
-    		showMetros();
+    		$('#stateselect-wrapper').show();
+    		//showMetros();
     	}
     	
 });
@@ -56,9 +56,9 @@ $('#state-select').on("change",function(event){
     	}
     	
     	// if level is metro show metros
-    	/*if(level == 'metro') {
+    	if(level == 'metro') {
     		showMetros(state);
-    	}*/
+    	}
 });
 
 
@@ -66,7 +66,7 @@ function showCounties(state){
 	 $.ajax({
         type: 'POST',
         dataType: 'html',
-        url: 'http://www.censusscope.org/new/topics/services/get_counties.php',
+        url: 'http://www.censusscope.org/newdev/censusscope/app/services/get_counties.php',
         data: {state: state},
         success: function (data) {
         	$('#county-wrapper').empty();
@@ -78,12 +78,13 @@ function showCounties(state){
 } 
 
 
-function showMetros(){
+function showMetros(state){
+console.log(state);
 	 $.ajax({
         type: 'POST',
         dataType: 'html',
-        url: 'http://www.censusscope.org/new/topics/services/get_metros.php',
-       // data: {state: state},
+        url: 'http://www.censusscope.org/newdev/censusscope/app/services/get_metros.php',
+        data: {state: state},
         success: function (data) {
         console.log(data);
         	$('#metro-wrapper').empty();

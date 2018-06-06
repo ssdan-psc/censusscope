@@ -1,10 +1,10 @@
 <?php
 
-//$state = $_POST['state'];
+$state = $_POST['state'];
 // define the table to use for this topic
-$table = "Test_3_9";
+$table = "states_metros";
 
-function queryAllDB($query){
+function queryAllDB($query,$query_params){
 include '../includes/config.inc';
 $host = $db_host;
 $db   = $db_name;
@@ -31,14 +31,16 @@ catch (PDOException $e) {
 }
 
 }
-//$query = "SELECT distinct NAME,GEOID FROM " . $table . " WHERE STATE =? AND SUMLEVEL = 160";
-$query = "SELECT distinct NAME,GEOID FROM " . $table . " WHERE SUMLEVEL = 310";
-//$query_params = array($state);
-$metros = queryAllDB($query);
+
+//$query = "SELECT distinct CBSAName,geoid FROM " . $table . " WHERE SUMLEVEL = 310";
+//SELECT distinct CBSAName,geoid FROM `states_metros` WHERE StFIPS = 6
+$query = "SELECT distinct CBSAName,geoid FROM " . $table . " WHERE StFIPS = ?";
+$query_params = array($state);
+$metros = queryAllDB($query,$query_params);
 
 $geo_options = ''; 
 foreach ($metros as $row) {
-$geo_options .= '<option value="'.$row['GEOID'].'">'.$row['NAME'].'</option>';
+$geo_options .= '<option value="'.$row['geoid'].'">'.$row['CBSAName'].'</option>';
 }
 	 
 echo '<label for="metro">3. Choose a metro</label> <select id="metro" name="geoid">'.$geo_options.'</select>';

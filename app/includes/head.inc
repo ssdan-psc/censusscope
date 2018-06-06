@@ -22,8 +22,8 @@ include 'states.inc';
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-<script src="/new/topics/js/topics.js"></script>
-<link href="/new/topics/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/newdev/censusscope/app/js/topics.js"></script>
+<link href="/newdev/censusscope/app/css/style.css" rel="stylesheet" type="text/css" />
 <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
